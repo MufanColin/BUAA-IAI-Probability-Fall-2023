@@ -1,0 +1,16 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: intro
+chapters:
+- file: markdown
+- file: notebooks
+- file: markdown-notebooks
+- file: 随机事件
+- file: 正态分布
+- file: 变量替换法
+- file: 条件分布与条件期望
+- file: 依概率收敛
+- file: 大数定律
+- file: 中心极限定理
