@@ -66,8 +66,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = '正态分布';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="依概率收敛" href="%E4%BE%9D%E6%A6%82%E7%8E%87%E6%94%B6%E6%95%9B.html" />
-    <link rel="prev" title="Notebooks with MyST Markdown" href="markdown-notebooks.html" />
+    <link rel="next" title="变量替换法" href="%E5%8F%98%E9%87%8F%E6%9B%BF%E6%8D%A2%E6%B3%95.html" />
+    <link rel="prev" title="随机事件" href="%E9%9A%8F%E6%9C%BA%E4%BA%8B%E4%BB%B6.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -162,9 +162,13 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="markdown.html">Markdown Files</a></li>
 <li class="toctree-l1"><a class="reference internal" href="notebooks.html">Content with notebooks</a></li>
 <li class="toctree-l1"><a class="reference internal" href="markdown-notebooks.html">Notebooks with MyST Markdown</a></li>
+<li class="toctree-l1"><a class="reference internal" href="%E9%9A%8F%E6%9C%BA%E4%BA%8B%E4%BB%B6.html">随机事件</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">正态分布</a></li>
+<li class="toctree-l1"><a class="reference internal" href="%E5%8F%98%E9%87%8F%E6%9B%BF%E6%8D%A2%E6%B3%95.html">变量替换法</a></li>
+<li class="toctree-l1"><a class="reference internal" href="%E6%9D%A1%E4%BB%B6%E5%88%86%E5%B8%83%E4%B8%8E%E6%9D%A1%E4%BB%B6%E6%9C%9F%E6%9C%9B.html">条件分布与条件期望</a></li>
 <li class="toctree-l1"><a class="reference internal" href="%E4%BE%9D%E6%A6%82%E7%8E%87%E6%94%B6%E6%95%9B.html">依概率收敛</a></li>
 <li class="toctree-l1"><a class="reference internal" href="%E5%A4%A7%E6%95%B0%E5%AE%9A%E5%BE%8B.html">大数定律</a></li>
+<li class="toctree-l1"><a class="reference internal" href="%E4%B8%AD%E5%BF%83%E6%9E%81%E9%99%90%E5%AE%9A%E7%90%86.html">中心极限定理</a></li>
 </ul>
 
     </div>
@@ -360,8 +364,10 @@ document.write(`
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">典型题目</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fa22">fa22</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">题目</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">解答</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">题目一</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">题目一解答</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">题目二</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">题目二解答</a></li>
 </ul>
 </li>
 </ul>
@@ -384,13 +390,13 @@ document.write(`
 <section id="fa22">
 <h3>fa22<a class="headerlink" href="#fa22" title="Permalink to this heading">#</a></h3>
 <section id="id3">
-<h4>题目<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h4>
+<h4>题目一<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h4>
 <p>设 <span class="math notranslate nohighlight">\(x_1,x_2,\cdots,x_n\)</span> 独立同分布，都服从 <span class="math notranslate nohighlight">\(N(0,\sigma^2)\)</span>，<span class="math notranslate nohighlight">\(\displaystyle{\bar{x}=\frac{1}{n}\sum_{i=1}^{n}x_i}\)</span>，<span class="math notranslate nohighlight">\(a\)</span> 和 <span class="math notranslate nohighlight">\(b\)</span> 都是已知常数，且 <span class="math notranslate nohighlight">\(a&lt;b\)</span>。</p>
 <p>(1) 求概率 <span class="math notranslate nohighlight">\(P\lbrace a\le \bar{x} \le b\rbrace\)</span></p>
 <p>(2) 当 <span class="math notranslate nohighlight">\(a\)</span> 与 <span class="math notranslate nohighlight">\(b\)</span> 同号时，求 <span class="math notranslate nohighlight">\(\sigma^2\)</span>，使概率 <span class="math notranslate nohighlight">\(P\lbrace a\le \bar{x} \le b\rbrace\)</span> 最大，并给出最大值。</p>
 </section>
 <section id="id4">
-<h4>解答<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h4>
+<h4>题目一解答<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h4>
 <p>(1) 因为 <span class="math notranslate nohighlight">\(x_1,x_2,\cdots,x_n\)</span> 独立同分布，都服从 <span class="math notranslate nohighlight">\(N(0,\sigma^2)\)</span>，所以 <span class="math notranslate nohighlight">\(\bar{x}\)</span> 服从 <span class="math notranslate nohighlight">\(N\bigg(0,\dfrac{\sigma^2}{n}\bigg)\)</span>。</p>
 <p>所以 <span class="math notranslate nohighlight">\(P\lbrace a\le \bar{x} \le b\rbrace=\Phi\bigg(\dfrac{b\sqrt{n}}{\sigma}\bigg)-\Phi\bigg(\dfrac{a\sqrt{n}}{\sigma}\bigg)\)</span>。</p>
 <p>(2) 记 <span class="math notranslate nohighlight">\(S(\sigma)=\Phi\bigg(\dfrac{b\sqrt{n}}{\sigma}\bigg)-\Phi\bigg(\dfrac{a\sqrt{n}}{\sigma}\bigg)\)</span>，则</p>
@@ -409,6 +415,74 @@ S'(\sigma)=\dfrac{1}{\sqrt{2\pi}}\bigg(e^{-\frac{b^2n}{2\sigma^2}}\dfrac{-b\sqrt
 <p>则</p>
 <div class="math notranslate nohighlight">
 \[ae^{-\frac{a^2n}{2\sigma^2}}=be^{-\frac{b^2n}{2\sigma^2}}\]</div>
+<p>我们不妨假设 <span class="math notranslate nohighlight">\(b&gt;a&gt;0\)</span>，则</p>
+<div class="math notranslate nohighlight">
+\[
+\dfrac{a}{b}=\dfrac{e^{-\frac{b^2n}{2\sigma^2}}}{e^{-\frac{a^2n}{2\sigma^2}}}=e^{\frac{(a^2-b^2)n}{2\sigma^2}}
+\]</div>
+<p>则</p>
+<div class="math notranslate nohighlight">
+\[
+\sigma^2=\dfrac{(a^2-b^2)n}{2(\ln{a}-\ln{b})}=\dfrac{(b^2-a^2)n}{2(\ln b-\ln a)}
+\]</div>
+<p>将 <span class="math notranslate nohighlight">\(\sigma^2\)</span> 的表达式代入 <span class="math notranslate nohighlight">\(S(\sigma)\)</span> 中，可得</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+S(\sigma)&amp;=\Phi\bigg(\dfrac{b\sqrt{n}}{\sigma}\bigg)-\Phi\bigg(\dfrac{a\sqrt{n}}{\sigma}\bigg)\\
+&amp;=\Phi\bigg(\dfrac{b\sqrt{2(\ln b-\ln a)}}{\sqrt{b^2-a^2}}\bigg)-\Phi\bigg(\dfrac{a\sqrt{2(\ln b-\ln a)}}{\sqrt{b^2-a^2}}\bigg)\\
+\end{aligned}
+\end{split}\]</div>
+<p>当 <span class="math notranslate nohighlight">\(a&lt;b&lt;0\)</span> 时，类似可得</p>
+<div class="math notranslate nohighlight">
+\[
+\sigma^2=\dfrac{(a^2-b^2)n}{2(\ln{(-a)}-\ln{(-b)})}
+\]</div>
+<p>此时,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+S(\sigma)&amp;=\Phi\bigg(\dfrac{b\sqrt{n}}{\sigma}\bigg)-\Phi\bigg(\dfrac{a\sqrt{n}}{\sigma}\bigg)\\
+&amp;=\Phi\bigg(\dfrac{b\sqrt{2(\ln(-a)-\ln(-b))}}{\sqrt{a^2-b^2}}\bigg)-\Phi\bigg(\dfrac{a\sqrt{2(\ln(-a)-\ln(-b))}}{\sqrt{a^2-b^2}}\bigg)\\
+\end{aligned}
+\end{split}\]</div>
+</section>
+<section id="id5">
+<h4>题目二<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h4>
+<p>(1)</p>
+<p>(2) 设随机变量 <span class="math notranslate nohighlight">\((X,Y)\)</span> 服从二维正态分布，且有 <span class="math notranslate nohighlight">\(D(X)=\sigma_{X}^2\)</span>，<span class="math notranslate nohighlight">\(D(Y)=\sigma_{Y}^2\)</span>，证明当 <span class="math notranslate nohighlight">\(a^2=\sigma_{X}^2/\sigma_{Y}^2\)</span> 时，随机变量 <span class="math notranslate nohighlight">\(W=X-aY\)</span> 与 <span class="math notranslate nohighlight">\(V=X+aY\)</span> 互相独立。</p>
+</section>
+<section id="id6">
+<h4>题目二解答<a class="headerlink" href="#id6" title="Permalink to this heading">#</a></h4>
+<p>(2) 因为 <span class="math notranslate nohighlight">\((X,Y)\)</span> 服从二维正态分布，根据正态分布的线性组合仍是正态分布的性质可得 <span class="math notranslate nohighlight">\((W,V)\)</span> 服从二维正态分布，因此如果 <span class="math notranslate nohighlight">\(W\)</span> 和 <span class="math notranslate nohighlight">\(V\)</span> 不相关，则 <span class="math notranslate nohighlight">\(W\)</span> 和 <span class="math notranslate nohighlight">\(V\)</span> 独立，所以我们只需要证明 <span class="math notranslate nohighlight">\(Cov(W,V)=0\)</span> 即可。</p>
+<p>先来看一种稍微麻烦一点的计算方法。<span class="math notranslate nohighlight">\(E(W)=E(X-aY)=E(X)-aE(Y)\)</span>，<span class="math notranslate nohighlight">\(E(V)=E(X+aY)=E(X)+aE(Y)\)</span>，所以 <span class="math notranslate nohighlight">\(E(W)E(V)=[E(X)]^2-a^2[E(Y)]^2\)</span>。</p>
+<p>而 <span class="math notranslate nohighlight">\(E(WV)=E[(X-aY)(X+aY)]=E(X^2-a^2Y^2)=E(X^2)-a^2E(Y^2)\)</span>。</p>
+<p>所以</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+Cov(W,V)&amp;=E(WV)-E(W)E(V)\\
+&amp;=E(X^2)-a^2E(Y^2)-[E(X)]^2+a^2[E(Y)]^2\\
+&amp;=D(X)-a^2D(Y)\\
+&amp;=\sigma_{X}^2-\dfrac{\sigma_{X}^2}{\sigma_{Y}^2}\sigma_{Y}^2\\
+&amp;=0
+\end{aligned}
+\end{split}\]</div>
+<p>再来看一种简单的计算方法。</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+Cov(W,V)&amp;=Cov(X-aY,X+aY)\\
+&amp;=Cov(X,X)-a^2Cov(Y,Y)\\
+&amp;=D(X)-a^2D(Y)\\
+&amp;=\sigma_{X}^2-\dfrac{\sigma_{X}^2}{\sigma_{Y}^2}\sigma_{Y}^2\\
+&amp;=0
+\end{aligned}
+\end{split}\]</div>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>巧用协方差的双线性性质，可以简化计算。</p>
+</div>
 </section>
 </section>
 </section>
@@ -446,20 +520,20 @@ S'(\sigma)=\dfrac{1}{\sqrt{2\pi}}\bigg(e^{-\frac{b^2n}{2\sigma^2}}\dfrac{-b\sqrt
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="markdown-notebooks.html"
+       href="%E9%9A%8F%E6%9C%BA%E4%BA%8B%E4%BB%B6.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Notebooks with MyST Markdown</p>
+        <p class="prev-next-title">随机事件</p>
       </div>
     </a>
     <a class="right-next"
-       href="%E4%BE%9D%E6%A6%82%E7%8E%87%E6%94%B6%E6%95%9B.html"
+       href="%E5%8F%98%E9%87%8F%E6%9B%BF%E6%8D%A2%E6%B3%95.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">依概率收敛</p>
+        <p class="prev-next-title">变量替换法</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -483,8 +557,10 @@ S'(\sigma)=\dfrac{1}{\sqrt{2\pi}}\bigg(e^{-\frac{b^2n}{2\sigma^2}}\dfrac{-b\sqrt
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">典型题目</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fa22">fa22</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">题目</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">解答</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">题目一</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">题目一解答</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">题目二</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">题目二解答</a></li>
 </ul>
 </li>
 </ul>
