@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html lang="en" data-content_root="" >
 
   <head>
     <meta charset="utf-8" />
@@ -19,12 +19,12 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
 
   
-  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
@@ -38,8 +38,9 @@
     <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
 
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
@@ -78,6 +79,15 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
   
   <input type="checkbox"
           class="sidebar-toggle"
@@ -131,9 +141,11 @@ const thebe_selector_output = ".output, .cell_output"
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
+
   
 
 <a class="navbar-brand logo" href="intro.html">
+  
   
   
   
@@ -143,8 +155,8 @@ const thebe_selector_output = ".output, .cell_output"
       
     
     
-    <img src="_static/logo.png" class="logo__image only-light" alt="Logo image"/>
-    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+    <img src="_static/logo.png" class="logo__image only-light" alt="My sample book - Home"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="My sample book - Home"/>`);</script>
   
   
 </a></div>
@@ -167,6 +179,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="%E5%8F%98%E9%87%8F%E6%9B%BF%E6%8D%A2%E6%B3%95.html">变量替换法</a></li>
 <li class="toctree-l1"><a class="reference internal" href="%E6%9D%A1%E4%BB%B6%E5%88%86%E5%B8%83%E4%B8%8E%E6%9D%A1%E4%BB%B6%E6%9C%9F%E6%9C%9B.html">条件分布与条件期望</a></li>
 <li class="toctree-l1"><a class="reference internal" href="%E4%BE%9D%E6%A6%82%E7%8E%87%E6%94%B6%E6%95%9B.html">依概率收敛</a></li>
+<li class="toctree-l1"><a class="reference internal" href="%E7%89%B9%E5%BE%81%E5%87%BD%E6%95%B0.html">特征函数</a></li>
 <li class="toctree-l1"><a class="reference internal" href="%E5%A4%A7%E6%95%B0%E5%AE%9A%E5%BE%8B.html">大数定律</a></li>
 <li class="toctree-l1"><a class="reference internal" href="%E4%B8%AD%E5%BF%83%E6%9E%81%E9%99%90%E5%AE%9A%E7%90%86.html">中心极限定理</a></li>
 </ul>
@@ -322,20 +335,22 @@ const thebe_selector_output = ".output, .cell_output"
 </button>
 
 
+
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
 `);
 </script>
 
+
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
@@ -449,11 +464,16 @@ S(\sigma)&amp;=\Phi\bigg(\dfrac{b\sqrt{n}}{\sigma}\bigg)-\Phi\bigg(\dfrac{a\sqrt
 </section>
 <section id="id5">
 <h4>题目二<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h4>
-<p>(1)</p>
+<p>(1) 设随机变量 <span class="math notranslate nohighlight">\(W=(aX+3Y)^2\)</span>，<span class="math notranslate nohighlight">\(E(X)=E(Y)=0\)</span>，<span class="math notranslate nohighlight">\(D(X)=4\)</span>，<span class="math notranslate nohighlight">\(D(Y)=16\)</span>，<span class="math notranslate nohighlight">\(\rho_{XY}=-0.5\)</span>，求常数 <span class="math notranslate nohighlight">\(a\)</span> 使 <span class="math notranslate nohighlight">\(E(W)\)</span> 为最小，并求 <span class="math notranslate nohighlight">\(E(W)\)</span> 的最小值。</p>
 <p>(2) 设随机变量 <span class="math notranslate nohighlight">\((X,Y)\)</span> 服从二维正态分布，且有 <span class="math notranslate nohighlight">\(D(X)=\sigma_{X}^2\)</span>，<span class="math notranslate nohighlight">\(D(Y)=\sigma_{Y}^2\)</span>，证明当 <span class="math notranslate nohighlight">\(a^2=\sigma_{X}^2/\sigma_{Y}^2\)</span> 时，随机变量 <span class="math notranslate nohighlight">\(W=X-aY\)</span> 与 <span class="math notranslate nohighlight">\(V=X+aY\)</span> 互相独立。</p>
 </section>
 <section id="id6">
 <h4>题目二解答<a class="headerlink" href="#id6" title="Permalink to this heading">#</a></h4>
+<p>(1) 因为 <span class="math notranslate nohighlight">\(W=(aX+3Y)^2\)</span>，所以 <span class="math notranslate nohighlight">\(E(W)=a^2E(X^2)+6aE(XY)+9E(Y^2)\)</span>。</p>
+<p><span class="math notranslate nohighlight">\(E(X^2)=D(X)+[E(X)]^2=4\)</span>，<span class="math notranslate nohighlight">\(E(Y^2)=D(Y)+[E(Y)]^2=16\)</span>。</p>
+<p>根据 <span class="math notranslate nohighlight">\(\rho_{XY}=\dfrac{Cov(X,Y)}{\sqrt{D(X)}\sqrt{D(Y)}}=\dfrac{E(XY)-E(X)E(Y)}{\sqrt{D(X)}\sqrt{D(Y)}}\)</span>，解得 <span class="math notranslate nohighlight">\(E(XY)=-4\)</span>。</p>
+<p>所以 <span class="math notranslate nohighlight">\(E(W)=4a^2-24a+144=4(a-3)^2+108\ge 108\)</span>，当且仅当 <span class="math notranslate nohighlight">\(a=3\)</span> 时取等。</p>
+<p>所以当 <span class="math notranslate nohighlight">\(a=3\)</span> 时，<span class="math notranslate nohighlight">\(E(W)\)</span> 最小，其最小值为 <span class="math notranslate nohighlight">\(108\)</span>。</p>
 <p>(2) 因为 <span class="math notranslate nohighlight">\((X,Y)\)</span> 服从二维正态分布，根据正态分布的线性组合仍是正态分布的性质可得 <span class="math notranslate nohighlight">\((W,V)\)</span> 服从二维正态分布，因此如果 <span class="math notranslate nohighlight">\(W\)</span> 和 <span class="math notranslate nohighlight">\(V\)</span> 不相关，则 <span class="math notranslate nohighlight">\(W\)</span> 和 <span class="math notranslate nohighlight">\(V\)</span> 独立，所以我们只需要证明 <span class="math notranslate nohighlight">\(Cov(W,V)=0\)</span> 即可。</p>
 <p>先来看一种稍微麻烦一点的计算方法。<span class="math notranslate nohighlight">\(E(W)=E(X-aY)=E(X)-aE(Y)\)</span>，<span class="math notranslate nohighlight">\(E(V)=E(X+aY)=E(X)+aE(Y)\)</span>，所以 <span class="math notranslate nohighlight">\(E(W)E(V)=[E(X)]^2-a^2[E(Y)]^2\)</span>。</p>
 <p>而 <span class="math notranslate nohighlight">\(E(WV)=E[(X-aY)(X+aY)]=E(X^2-a^2Y^2)=E(X^2)-a^2E(Y^2)\)</span>。</p>
@@ -513,11 +533,10 @@ Cov(W,V)&amp;=Cov(X-aY,X+aY)\\
 
               
               
-                <footer class="bd-footer-article">
+              
+              
+                <footer class="prev-next-footer">
                   
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="%E9%9A%8F%E6%9C%BA%E4%BA%8B%E4%BB%B6.html"
@@ -537,10 +556,7 @@ Cov(W,V)&amp;=Cov(X-aY,X+aY)\\
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
@@ -586,6 +602,7 @@ By The Jupyter Book Community
   
   <div class="footer-item">
     
+
   <p class="copyright">
     
       © Copyright 2022.
@@ -612,8 +629,8 @@ By The Jupyter Book Community
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script src="_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
 
   <footer class="bd-footer">
   </footer>
