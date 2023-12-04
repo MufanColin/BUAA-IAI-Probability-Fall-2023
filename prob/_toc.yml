@@ -12,5 +12,6 @@ chapters:
 - file: 变量替换法
 - file: 条件分布与条件期望
 - file: 依概率收敛
+- file: 特征函数
 - file: 大数定律
 - file: 中心极限定理
