@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html lang="en" data-content_root="" >
 
   <head>
     <meta charset="utf-8" />
@@ -19,12 +19,12 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
 
   
-  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
@@ -38,8 +38,9 @@
     <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
 
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
@@ -78,6 +79,15 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
   
   <input type="checkbox"
           class="sidebar-toggle"
@@ -131,9 +141,11 @@ const thebe_selector_output = ".output, .cell_output"
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
+
   
 
 <a class="navbar-brand logo" href="intro.html">
+  
   
   
   
@@ -143,8 +155,8 @@ const thebe_selector_output = ".output, .cell_output"
       
     
     
-    <img src="_static/logo.png" class="logo__image only-light" alt="Logo image"/>
-    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+    <img src="_static/logo.png" class="logo__image only-light" alt="My sample book - Home"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="My sample book - Home"/>`);</script>
   
   
 </a></div>
@@ -323,20 +335,22 @@ const thebe_selector_output = ".output, .cell_output"
 </button>
 
 
+
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
 `);
 </script>
 
+
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
@@ -368,6 +382,13 @@ document.write(`
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">题目</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">解答</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">题外话</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">预测题</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">题目一</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">题目一解答</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">题目二</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">题目二解答</a></li>
 </ul>
 </li>
 </ul>
@@ -450,6 +471,98 @@ P(|Y_n|&lt;\epsilon)&amp;\ge 1-\dfrac{Var(Y_n)}{\epsilon^2}\\
 <p>又因为 <span class="math notranslate nohighlight">\(P(|Y_n|&lt;\epsilon)\le 1\)</span> 成立，所以 <span class="math notranslate nohighlight">\(\displaystyle{\lim_{n\to +\infty}P(|Y_n|&lt;\epsilon)=1}\)</span> 成立。</p>
 </section>
 </section>
+<section id="id6">
+<h3>预测题<a class="headerlink" href="#id6" title="Permalink to this heading">#</a></h3>
+<section id="id7">
+<h4>题目一<a class="headerlink" href="#id7" title="Permalink to this heading">#</a></h4>
+<p>设 <span class="math notranslate nohighlight">\(\lbrace X_n \rbrace\)</span> 为独立同分布的随机变量序列，其共同分布为</p>
+<div class="math notranslate nohighlight">
+\[
+P(X_n=k)=\dfrac{c}{k^2\cdot \lg^2 k},\quad k=2,3,\cdots
+\]</div>
+<p>其中</p>
+<div class="math notranslate nohighlight">
+\[
+c=\Big(\sum_{k=2}^{+\infty} \dfrac{1}{k^2\cdot \lg^{2}k}\Big)^{-1}
+\]</div>
+<p>试问 <span class="math notranslate nohighlight">\(\lbrace X_n \rbrace\)</span> 是否服从大数定律？</p>
+</section>
+<section id="id8">
+<h4>题目一解答<a class="headerlink" href="#id8" title="Permalink to this heading">#</a></h4>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+P(X_n=k)&amp;=\dfrac{c}{k^2\cdot \lg^2 k}\\
+&amp;=\dfrac{\frac{1}{k^2\cdot \lg^2 k}}{\sum_{k=2}^{+\infty} \frac{1}{k^2\cdot \lg^{2}k}}\\
+\end{aligned}
+\end{split}\]</div>
+<p>从上面的变形可以看出概率之和确实为 <span class="math notranslate nohighlight">\(1\)</span>。</p>
+<p>由题目中独立同分布的条件联想辛钦大数定律，考虑计算 <span class="math notranslate nohighlight">\(E(X_n)\)</span>。</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+E(X_n)&amp;=\sum_{k=2}^{+\infty} kP(X_n=k)\\
+&amp;=c\sum_{k=2}^{+\infty} \dfrac{1}{k\lg^{2}k}
+\end{aligned}
+\end{split}\]</div>
+<p>该级数收敛，因此 <span class="math notranslate nohighlight">\(E(X_n)\)</span> 存在，所以 <span class="math notranslate nohighlight">\(\lbrace X_n\rbrace\)</span> 服从大数定律。</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ol class="arabic simple">
+<li><p>关于在求解数学期望的时候把 <span class="math notranslate nohighlight">\(c\)</span> 提出来可以这样理解，<span class="math notranslate nohighlight">\(c\)</span> 扮演的角色是归一化因子，因此可以当成是一个与 <span class="math notranslate nohighlight">\(k\)</span> 无关的量。</p></li>
+<li><p>该级数收敛的原因是 <span class="math notranslate nohighlight">\(\lg k\)</span> 的次数为 <span class="math notranslate nohighlight">\(2&gt;1\)</span>。</p></li>
+</ol>
+</div>
+</section>
+<section id="id9">
+<h4>题目二<a class="headerlink" href="#id9" title="Permalink to this heading">#</a></h4>
+<p>设 <span class="math notranslate nohighlight">\(S_n\)</span> 为 <span class="math notranslate nohighlight">\(n\)</span> 次独立试验中事件 <span class="math notranslate nohighlight">\(A\)</span> 出现的次数，而事件 <span class="math notranslate nohighlight">\(A\)</span> 在第 <span class="math notranslate nohighlight">\(i\)</span> 次试验时出现的概率为 <span class="math notranslate nohighlight">\(p_i\)</span>，<span class="math notranslate nohighlight">\(i=1,2,\cdots, n\cdots\)</span>，则对任意的 <span class="math notranslate nohighlight">\(\epsilon&gt;0\)</span>，有</p>
+<div class="math notranslate nohighlight">
+\[
+\lim_{n\to+\infty}P\bigg(\bigg|\dfrac{S_n}{n}-\dfrac{1}{n}\sum_{i=1}^{n} p_i\bigg|&lt;\epsilon \bigg)=1
+\]</div>
+</section>
+<section id="id10">
+<h4>题目二解答<a class="headerlink" href="#id10" title="Permalink to this heading">#</a></h4>
+<p>记 <span class="math notranslate nohighlight">\(S_n=X_1+X_2+\cdots+X_n\)</span>，其中</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+X_i=\begin{cases}
+1 \quad \text{第$i$次试验事件$A$发生}\\
+0 \quad \text{第$i$次试验事件$A$未发生}
+\end{cases}
+\end{split}\]</div>
+<p>则 <span class="math notranslate nohighlight">\(E(S_n)=E(X_1)+E(X_2)+\cdots+E(X_n)=\sum_{i=1}^{n} p_i\)</span>，<span class="math notranslate nohighlight">\(\displaystyle{E\Big(\dfrac{S_n}{n}\Big)=\dfrac{1}{n}\sum_{i=1}^{n}p_i}\)</span></p>
+<p>并且</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+Var\Big(\dfrac{S_n}{n}\Big)&amp;=\dfrac{1}{n^2}\sum_{i=1}^{n}Var(X_i)\\
+&amp;=\dfrac{1}{n^2}\sum_{i=1}^{n} p_i(1-p_i)\\
+&amp;\le \dfrac{1}{n^2}\cdot n\cdot \dfrac{1}{4}\\
+&amp;=\dfrac{1}{4n}
+\end{aligned}
+\end{split}\]</div>
+<p>则根据切比雪夫不等式</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+1\ge P\bigg(\bigg|\dfrac{S_n}{n}-\dfrac{1}{n}\sum_{i=1}^{n} p_i\bigg|&lt;\epsilon \bigg)&amp;\ge 1-\dfrac{Var\big(\frac{S_n}{n}\big)}{\epsilon^2}\\
+&amp;\ge 1-\dfrac{1}{4n\epsilon^2}\\
+&amp;\to 1(n\to +\infty) 
+\end{aligned}
+\end{split}\]</div>
+<p>因此，</p>
+<div class="math notranslate nohighlight">
+\[
+\lim_{n\to+\infty}P\bigg(\bigg|\dfrac{S_n}{n}-\dfrac{1}{n}\sum_{i=1}^{n} p_i\bigg|&lt;\epsilon \bigg)=1
+\]</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>用到了夹逼定理。</p>
+</div>
+</section>
+</section>
 </section>
 </section>
 
@@ -478,11 +591,10 @@ P(|Y_n|&lt;\epsilon)&amp;\ge 1-\dfrac{Var(Y_n)}{\epsilon^2}\\
 
               
               
-                <footer class="bd-footer-article">
+              
+              
+                <footer class="prev-next-footer">
                   
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="%E7%89%B9%E5%BE%81%E5%87%BD%E6%95%B0.html"
@@ -502,10 +614,7 @@ P(|Y_n|&lt;\epsilon)&amp;\ge 1-\dfrac{Var(Y_n)}{\epsilon^2}\\
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
@@ -525,6 +634,13 @@ P(|Y_n|&lt;\epsilon)&amp;\ge 1-\dfrac{Var(Y_n)}{\epsilon^2}\\
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">题目</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">解答</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">题外话</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">预测题</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">题目一</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">题目一解答</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">题目二</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">题目二解答</a></li>
 </ul>
 </li>
 </ul>
@@ -550,6 +666,7 @@ By The Jupyter Book Community
   
   <div class="footer-item">
     
+
   <p class="copyright">
     
       © Copyright 2022.
@@ -576,8 +693,8 @@ By The Jupyter Book Community
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script src="_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
 
   <footer class="bd-footer">
   </footer>
