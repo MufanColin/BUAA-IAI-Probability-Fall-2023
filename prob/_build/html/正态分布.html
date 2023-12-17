@@ -385,6 +385,11 @@ document.write(`
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">题目二解答</a></li>
 </ul>
 </li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">预测</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">题目一</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">题目一解答</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -505,6 +510,87 @@ Cov(W,V)&amp;=Cov(X-aY,X+aY)\\
 </div>
 </section>
 </section>
+<section id="id7">
+<h3>预测<a class="headerlink" href="#id7" title="Permalink to this heading">#</a></h3>
+<section id="id8">
+<h4>题目一<a class="headerlink" href="#id8" title="Permalink to this heading">#</a></h4>
+<p>设随机变量 <span class="math notranslate nohighlight">\(X\sim N(0,1)\)</span>，在 <span class="math notranslate nohighlight">\(X=x\)</span> 条件下，随机变量 <span class="math notranslate nohighlight">\(Y\sim N(x,1)\)</span>，则 <span class="math notranslate nohighlight">\(X\)</span> 与 <span class="math notranslate nohighlight">\(Y\)</span> 的相关系数为</p>
+<p>(A) <span class="math notranslate nohighlight">\(1/4\)</span></p>
+<p>(B) <span class="math notranslate nohighlight">\(1/2\)</span></p>
+<p>(C) <span class="math notranslate nohighlight">\(\sqrt{3}/3\)</span></p>
+<p>(D) <span class="math notranslate nohighlight">\(\sqrt{2}/2\)</span></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>本题是 2022 年考研数学一选择第 10 题。</p>
+</div>
+</section>
+<section id="id9">
+<h4>题目一解答<a class="headerlink" href="#id9" title="Permalink to this heading">#</a></h4>
+<p>由题意可得 <span class="math notranslate nohighlight">\(E(Y|X=x)=x\)</span>，根据重期望公式不难得出 <span class="math notranslate nohighlight">\(E(Y)=E(E(Y|X))=E(X)=0\)</span>。</p>
+<p>因此</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\rho_{XY}&amp;=\dfrac{Cov(X,Y)}{\sqrt{Var(X)}\sqrt{Var(Y)}}\\
+&amp;=\dfrac{E(XY)}{\sqrt{E(X^2)}\sqrt{E(Y^2)}}\\
+\end{aligned}
+\end{split}\]</div>
+<p>因此，接下来我们的目标就是来计算 <span class="math notranslate nohighlight">\(E(X^2)\)</span>，<span class="math notranslate nohighlight">\(E(Y^2)\)</span> 和 <span class="math notranslate nohighlight">\(E(XY)\)</span> 的值。</p>
+<p>利用分部积分法，我们可以得到 <span class="math notranslate nohighlight">\(E(X^2)=1\)</span>。</p>
+<p>计算 <span class="math notranslate nohighlight">\(E(X^2)\)</span> 的详细步骤如下所示：</p>
+<div class="toggle docutils container">
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+E(X^2)&amp;=\int_{-\infty}^{+\infty}x^2\dfrac{1}{\sqrt{2\pi}}e^{-\frac{x^2}{2}}\mathrm{d}x\\
+&amp;=2\dfrac{1}{\sqrt{2\pi}}\int_{0}^{+\infty}x^2e^{-\frac{x^2}{2}}\mathrm{d}x\\
+&amp;=2\dfrac{1}{\sqrt{2\pi}}\int_{0}^{+\infty}(-x)\Big(-xe^{-\frac{x^2}{2}}\mathrm{d}x\Big)\\
+&amp;=\dfrac{2}{\sqrt{2\pi}}\int_{0}^{+\infty}(-x)\mathrm{d}\Big(e^{-\frac{x^2}{2}}\Big)\\
+&amp;=\dfrac{2}{\sqrt{2\pi}}\bigg(-xe^{-\frac{x^2}{2}}\Big|_0^{+\infty}-\int_{0}^{+\infty}(-1)e^{-\frac{x^2}{2}}\mathrm{d}x\bigg)\\
+&amp;=\dfrac{2}{\sqrt{2\pi}}\int_{0}^{+\infty}e^{-\frac{x^2}{2}}\\
+&amp;=\int_{-\infty}^{+\infty}\dfrac{1}{\sqrt{2\pi}}e^{-\frac{x^2}{2}}\mathrm{d}x\\
+&amp;=1
+\end{aligned}
+\end{split}\]</div>
+</div>
+<p>利用条件概率的性质，我们可以得到 <span class="math notranslate nohighlight">\(E(XY)=1\)</span>。</p>
+<p>计算 <span class="math notranslate nohighlight">\(E(XY)\)</span> 的详细步骤如下所示：</p>
+<div class="toggle docutils container">
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+E(XY)&amp;=\int_{-\infty}^{+\infty}\int_{-\infty}^{+\infty}xyp(x,y)\mathrm{d}y\mathrm{d}x\\
+&amp;=\int_{-\infty}^{+\infty}\int_{-\infty}^{+\infty}xyp(y|x)p(x)\mathrm{d}y\mathrm{d}x\\
+&amp;=\int_{-\infty}^{+\infty}xE(Y|X=x)p(x)\mathrm{d}x\\
+&amp;=\int_{-\infty}^{+\infty}x^2p(x)\mathrm{d}x\\
+&amp;=1
+\end{aligned}
+\end{split}\]</div>
+</div>
+<p>利用条件期望的性质和重期望公式，我们可以得到 <span class="math notranslate nohighlight">\(E(Y^2)=2\)</span>。因为 <span class="math notranslate nohighlight">\(E(Y|X=x)=x\)</span>，<span class="math notranslate nohighlight">\(Var(Y|X=x)=1\)</span>，所以 <span class="math notranslate nohighlight">\(E(Y^2|X=x)=x^2+1\)</span>。</p>
+<p>所以</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+E(Y^2)&amp;=E(E(Y^2|X))\\
+&amp;=E(X^2+1)\\
+&amp;=E(X^2)+1\\
+&amp;=2
+\end{aligned}
+\end{split}\]</div>
+<p>因此</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\rho_{XY}&amp;=\dfrac{Cov(X,Y)}{\sqrt{Var(X)}\sqrt{Var(Y)}}\\
+&amp;=\dfrac{E(XY)}{\sqrt{E(X^2)}\sqrt{E(Y^2)}}\\
+&amp;=\dfrac{1}{1\times\sqrt{2}}\\
+&amp;=\dfrac{\sqrt{2}}{2}
+\end{aligned}
+\end{split}\]</div>
+<p>故本题的正确答案是 D。</p>
+</section>
+</section>
 </section>
 </section>
 
@@ -577,6 +663,11 @@ Cov(W,V)&amp;=Cov(X-aY,X+aY)\\
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">题目一解答</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">题目二</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">题目二解答</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">预测</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">题目一</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">题目一解答</a></li>
 </ul>
 </li>
 </ul>
