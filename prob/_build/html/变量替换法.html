@@ -383,6 +383,12 @@ document.write(`
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">题目一解答</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">题目二</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">题目二解答</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">题目三</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">题目三解答</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">方法一</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">方法二</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -485,6 +491,115 @@ p(x,y)=\dfrac{1}{\sqrt{2\pi}}e^{-\frac{x^2}{2}}\cdot\dfrac{1}{\sqrt{2\pi}}e^{-\f
 \]</div>
 <p>所以 <span class="math notranslate nohighlight">\(X\)</span> 和 <span class="math notranslate nohighlight">\(Y\)</span> 是相互独立的标准正态随机变量。</p>
 </section>
+<section id="id7">
+<h4>题目三<a class="headerlink" href="#id7" title="Permalink to this heading">#</a></h4>
+<p>设随机变量 <span class="math notranslate nohighlight">\(X_1\)</span> 与 <span class="math notranslate nohighlight">\(X_2\)</span> 独立同分布，密度函数为 <span class="math notranslate nohighlight">\(p(x)=\begin{cases}2x&amp; 0&lt;x&lt;1\\ 0 &amp; otherwise \end{cases}\)</span>。求 <span class="math notranslate nohighlight">\(Z=\max\lbrace X_1,X_2\rbrace-\min \lbrace X_1,X_2\rbrace\)</span> 的分布。</p>
+</section>
+<section id="id8">
+<h4>题目三解答<a class="headerlink" href="#id8" title="Permalink to this heading">#</a></h4>
+<section id="id9">
+<h5>方法一<a class="headerlink" href="#id9" title="Permalink to this heading">#</a></h5>
+<p>一开始，我们可能会联想到最大值分布和最小值分布，例如我们可以设 <span class="math notranslate nohighlight">\(Y_1=\max\lbrace X_1,X_2\rbrace\)</span>，<span class="math notranslate nohighlight">\(Y_2=\min\lbrace X_1,X_2\rbrace\)</span>，然后求解出 <span class="math notranslate nohighlight">\(Y_1\)</span> 和 <span class="math notranslate nohighlight">\(Y_2\)</span> 的分布，然后我们就会发现求出 <span class="math notranslate nohighlight">\(Y_1\)</span> 和 <span class="math notranslate nohighlight">\(Y_2\)</span> 各自的分布对于解决这个问题并没有太大的帮助。</p>
+<p>本题让我们求解的是 <span class="math notranslate nohighlight">\(Z\)</span> 的分布，归根到底我们最好给出密度函数，即 <span class="math notranslate nohighlight">\(p_{Z}(z)\)</span>。求解密度函数，我们依然遵循一般思路，即先求出分布函数，然后对分布函数求导得到密度函数。</p>
+<p>我们依然可以假设 <span class="math notranslate nohighlight">\(Y_1=\max\lbrace X_1,X_2\rbrace\)</span>，<span class="math notranslate nohighlight">\(Y_2=\min\lbrace X_1,X_2\rbrace\)</span>，那么此时 <span class="math notranslate nohighlight">\(Z=Y_1-Y_2\)</span>。那么 <span class="math notranslate nohighlight">\(P(Z\le z)=P(Y_1-Y_2\le z)\)</span>，此时我们就会发现，我们需要知道的是 <span class="math notranslate nohighlight">\((Y_1,Y_2)\)</span> 的联合分布。</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+p(y_1,y_2)&amp;=P(Y_1=y_1,Y_2=y_2)\\
+&amp;=P(X_1=y_1,X_2=y_2)+P(X_1=y_2,X_2=y_1)\\
+&amp;=2y_1\cdot 2y_2\cdot 2\\
+&amp;=8y_1y_2
+\end{aligned}
+\end{split}\]</div>
+<p>注意此时的积分区域对应于 <span class="math notranslate nohighlight">\(0\le y_2\le 1\)</span>，<span class="math notranslate nohighlight">\(y_2\le y_1\le 1\)</span>。</p>
+<p>我们可以通过积分的方法来验证我们求解的联合分布函数是否正确，如下所示：</p>
+<div class="toggle docutils container">
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\int_{0}^{1}\int_{y_2}^{1}8y_1y_2\mathrm{d}y_1\mathrm{d}y_2&amp;=8\int_{0}^{1}\int_{y_2}^{1}y_1y_2\mathrm{d}y_1\mathrm{d}y_2\\
+&amp;=8\int_{0}^{1}\dfrac{1}{2}(1-y_2^2)y_2\mathrm{d}y_2\\
+&amp;=4\int_{0}^{1}(y_2-y_2^3)\mathrm{d}y_2\\
+&amp;=4\Big(\dfrac{1}{2}-\dfrac{1}{4}\Big)\\
+&amp;=1
+\end{aligned}
+\end{split}\]</div>
+</div>
+<p>然后，我们就可以去求解 <span class="math notranslate nohighlight">\(Z\)</span> 的分布函数，即 <span class="math notranslate nohighlight">\(P(Z\le z)\)</span>，最重要的依然是确定积分区域。</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>这里应该添加一张图片。</p>
+</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+P(Z\le z)&amp;=P(Y_1-Y_2\le z)\\
+&amp;=P(0\le Y_1-Y_2\le z)\\
+&amp;=1-\int_{0}^{1-z}\int_{y_2+z}^{1}8y_1y_2\mathrm{d}y_1\mathrm{d}y_2\\
+&amp;=1-8\int_{0}^{1-z}y_2\Big(\int_{y_2+z}^{1}y_1\mathrm{d}y_1\Big)\mathrm{d}y_2\\
+&amp;=1-4\int_{0}^{1-z}y_2[1-(y_2+z)^2]\mathrm{d}y_2\\
+&amp;=1-4\int_{0}^{1-z}(y_2-y_2^3-2y_2^2z-y_2z^2)\mathrm{d}y_2\\
+&amp;=1-4\cdot \Bigg(\dfrac{y_2^2}{2}-\dfrac{y_2^4}{4}-\dfrac{2y_2^3z}{3}-\dfrac{y_2^2z^2}{2}\Bigg)\bigg{|}_{0}^{1-z}\\
+&amp;=1-2(1-z)^2+(1-z)^4+\dfrac{8}{3}z(1-z)^3+2(1-z)^2z^2\\
+&amp;=\dfrac{1}{3}z^4-2z^2+\dfrac{8}{3}z
+\end{aligned}
+\end{split}\]</div>
+<p>容易验证，当 <span class="math notranslate nohighlight">\(z=1\)</span> 时，<span class="math notranslate nohighlight">\(\dfrac{1}{3}z^{4}-2z^2+\dfrac{8}{3}z=1\)</span>，当 <span class="math notranslate nohighlight">\(z=0\)</span> 时，<span class="math notranslate nohighlight">\(\dfrac{1}{3}z^{4}-2z^2+\dfrac{8}{3}z=0\)</span>。</p>
+<p>所以 <span class="math notranslate nohighlight">\(Z\)</span> 的密度函数为</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+p(z)=\begin{cases}
+\dfrac{4}{3}z^3-4z+\dfrac{8}{3}&amp; 0&lt;z&lt;1\\
+0 &amp; otherwise
+\end{cases}
+\end{split}\]</div>
+</section>
+<section id="id10">
+<h5>方法二<a class="headerlink" href="#id10" title="Permalink to this heading">#</a></h5>
+<p>本题也可以用变量替换法来求解，我们首先对 <span class="math notranslate nohighlight">\(Z\)</span> 进行变形，<span class="math notranslate nohighlight">\(Z=\max\lbrace X_1,X_2\rbrace-\min \lbrace X_1,X_2\rbrace=|X_1-X_2|\)</span>。接下来，我们令</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+U&amp;=X_1-X_2\\
+V&amp;=X_2
+\end{aligned}
+\end{split}\]</div>
+<p>则</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+X_1&amp;=U+V\\
+X_2&amp;=V
+\end{aligned}
+\end{split}\]</div>
+<p>然后，求解 <span class="math notranslate nohighlight">\(U\)</span> 和 <span class="math notranslate nohighlight">\(V\)</span> 的联合分布，即 <span class="math notranslate nohighlight">\(p(u,v)\)</span>。</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+p(u,v)&amp;=p(x_1(u,v),x_2(u,v))|J|\\
+&amp;=p(x_1(u,v),x_2(u,v))\Bigg|\dfrac{\partial{(x_1,x_2)}}{\partial{(u,v)}}\Bigg|\\
+&amp;=p(x_1(u,v))p(x_2(u,v))\\
+&amp;=2(u+v)\cdot 2v\\
+&amp;=4v(u+v)
+\end{aligned}
+\end{split}\]</div>
+<p>接下来的一个难点是求解 <span class="math notranslate nohighlight">\(U\)</span> 的边际分布，我们依然要确定好积分区域。</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>这里应该添加一张图片。</p>
+</div>
+<p>当 <span class="math notranslate nohighlight">\(0&lt;u&lt;1\)</span> 时，</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+p_{U}(u)&amp;=\int_{0}^{1-u}4(u+v)v\mathrm{d}v\\
+&amp;=\int_{0}^{1-u}(4uv+4v^2)\mathrm{d}v\\
+&amp;=2uv^2+\dfrac{4}{3}v^3\bigg{|}_{0}^{1-u}\\
+&amp;=\dfrac{2}{3}u^3-2u+\dfrac{4}{3}
+\end{aligned}
+\end{split}\]</div>
+</section>
+</section>
 </section>
 </section>
 </section>
@@ -558,6 +673,12 @@ p(x,y)=\dfrac{1}{\sqrt{2\pi}}e^{-\frac{x^2}{2}}\cdot\dfrac{1}{\sqrt{2\pi}}e^{-\f
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">题目一解答</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">题目二</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">题目二解答</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">题目三</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">题目三解答</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">方法一</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">方法二</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>

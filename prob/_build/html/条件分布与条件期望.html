@@ -379,13 +379,15 @@ document.write(`
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">典型题目</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fa22">fa22</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">题目</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">解答</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">题目一</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">题目一解答</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">题目二</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">题目二解答</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">预测题</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">题目</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">解答</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">预测题</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">题目</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">解答</a></li>
 </ul>
 </li>
 </ul>
@@ -408,14 +410,14 @@ document.write(`
 <section id="fa22">
 <h3>fa22<a class="headerlink" href="#fa22" title="Permalink to this heading">#</a></h3>
 <section id="id3">
-<h4>题目<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h4>
+<h4>题目一<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h4>
 <p>设随机变量 <span class="math notranslate nohighlight">\((X,Y)\)</span> 的概率密度函数为 <span class="math notranslate nohighlight">\(f(x,y)=\begin{cases} 1&amp;\quad |x|&lt;y&lt;1\\0&amp;\quad otherwise \end{cases}\)</span>，求</p>
 <p>(1) 条件概率密度函数 <span class="math notranslate nohighlight">\(f_{Y|X}(y|x)\)</span> 及条件概率 <span class="math notranslate nohighlight">\(P\Big\lbrace Y&gt;\dfrac{1}{2}\Big|X=\dfrac{1}{3}\Big\rbrace\)</span>。</p>
 <p>(2) <span class="math notranslate nohighlight">\(Z=Y-2X\)</span> 的概率密度函数。</p>
 <p>(3) 协方差 <span class="math notranslate nohighlight">\(Cov(X,Y)\)</span>。</p>
 </section>
 <section id="id4">
-<h4>解答<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h4>
+<h4>题目一解答<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h4>
 <p>(1)</p>
 <div class="math notranslate nohighlight">
 \[
@@ -477,11 +479,47 @@ p_{Z}(z)=
 </div>
 <p>(3) 因为积分区域关于 <span class="math notranslate nohighlight">\(y\)</span> 轴对称且在积分区域内服从均匀分布，所以 <span class="math notranslate nohighlight">\(E(X)=0\)</span>，<span class="math notranslate nohighlight">\(E(XY)=0\)</span>，<span class="math notranslate nohighlight">\(Cov(X,Y)=E(XY)-E(X)E(Y)=0\)</span>。</p>
 </section>
-</section>
 <section id="id5">
-<h3>预测题<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h3>
+<h4>题目二<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h4>
+<p>设随机变量 <span class="math notranslate nohighlight">\(X\)</span> 与 <span class="math notranslate nohighlight">\(Y\)</span> 互相独立，<span class="math notranslate nohighlight">\(X\)</span> 的概率分布为 <span class="math notranslate nohighlight">\(P(X=i)=\dfrac{1}{3},i=-1,0,1\)</span>，<span class="math notranslate nohighlight">\(Y\)</span> 的概率密度为 <span class="math notranslate nohighlight">\(f_{Y}(y)=\begin{cases} 1&amp;0\le y&lt;1\\0&amp;otherwise\end{cases}\)</span>，记 <span class="math notranslate nohighlight">\(Z=X+Y\)</span>。</p>
+<p>(1) 求 <span class="math notranslate nohighlight">\(P\Big{\lbrace}Z\le \dfrac{1}{2}|X=0\Big{\rbrace}\)</span></p>
+<p>(2) 求 <span class="math notranslate nohighlight">\(Z\)</span> 的概率密度 <span class="math notranslate nohighlight">\(f_{Z}(z)\)</span>。</p>
+</section>
 <section id="id6">
-<h4>题目<a class="headerlink" href="#id6" title="Permalink to this heading">#</a></h4>
+<h4>题目二解答<a class="headerlink" href="#id6" title="Permalink to this heading">#</a></h4>
+<p>(1)</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+P\Big{\lbrace}Z\le \dfrac{1}{2}|X=0\Big{\rbrace}&amp;=\dfrac{P(Z\le \dfrac{1}{2},X=0)}{P(X=0)}\\
+&amp;=\dfrac{P(X=0,Y\le \dfrac{1}{2})}{P(X=0)}\\
+&amp;=P(Y\le \dfrac{1}{2})\\
+&amp;=\dfrac{1}{2}
+\end{aligned}
+\end{split}\]</div>
+<p>(2) 求概率密度的基本思路就是对分布函数求导。因为 <span class="math notranslate nohighlight">\(X\)</span> 的可能取值只有 <span class="math notranslate nohighlight">\(-1,0,1\)</span>，<span class="math notranslate nohighlight">\(Y\)</span> 的可能取值为 <span class="math notranslate nohighlight">\([0,1)\)</span>，所以 <span class="math notranslate nohighlight">\(Z\)</span> 的取值范围是 <span class="math notranslate nohighlight">\([-1,2)\)</span>。</p>
+<ul class="simple">
+<li><p>当 <span class="math notranslate nohighlight">\(z\le -1\)</span> 的时候，<span class="math notranslate nohighlight">\(f_{Z}(z)=0\)</span>。</p></li>
+<li><p>当 <span class="math notranslate nohighlight">\(z\ge 2\)</span> 的时候，<span class="math notranslate nohighlight">\(f_{Z}(z)=1\)</span>。</p></li>
+<li><p>当 <span class="math notranslate nohighlight">\(-1&lt;z&lt;0\)</span> 的时候，<span class="math notranslate nohighlight">\(f_{Z}(z)=P(X+Y\le z)=P(X=-1,Z\le z+1)=\dfrac{z+1}{3}\)</span>。</p></li>
+<li><p>当 <span class="math notranslate nohighlight">\(0\le z&lt;1\)</span> 的时候，<span class="math notranslate nohighlight">\(f_{Z}(z)=P(X+Y\le z)=\dfrac{1}{3}+P(X=0,Y\le z)=\dfrac{z+1}{3}\)</span>。</p></li>
+<li><p>当 <span class="math notranslate nohighlight">\(1\le z &lt;2\)</span> 的时候，<span class="math notranslate nohighlight">\(f_{Z}(z)=P(X+Y\le z)=\dfrac{2}{3}+P(X=1,Y\le z-1)=\dfrac{2}{3}+\dfrac{z-1}{3}=\dfrac{z+1}{3}\)</span>。</p></li>
+</ul>
+<p>对分布函数求导，可得</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+f_Z(z)=
+\begin{cases}
+\dfrac{1}{3} &amp; -1\le z&lt;2\\
+0 &amp; otherwise
+\end{cases}
+\end{split}\]</div>
+</section>
+</section>
+<section id="id7">
+<h3>预测题<a class="headerlink" href="#id7" title="Permalink to this heading">#</a></h3>
+<section id="id8">
+<h4>题目<a class="headerlink" href="#id8" title="Permalink to this heading">#</a></h4>
 <p>设随机变量 <span class="math notranslate nohighlight">\(X\sim N(\mu,1)\)</span>，<span class="math notranslate nohighlight">\(Y\sim N(0,1)\)</span>，且 <span class="math notranslate nohighlight">\(X\)</span> 与 <span class="math notranslate nohighlight">\(Y\)</span> 相互独立，令</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
@@ -495,8 +533,8 @@ I=\begin{cases}
 <p>(2) <span class="math notranslate nohighlight">\(E(\Phi(X))=P(Y&lt;X)\)</span>。</p>
 <p>(3) <span class="math notranslate nohighlight">\(E(\Phi(X))=\Phi(\mu/\sqrt{2})\)</span>。</p>
 </section>
-<section id="id7">
-<h4>解答<a class="headerlink" href="#id7" title="Permalink to this heading">#</a></h4>
+<section id="id9">
+<h4>解答<a class="headerlink" href="#id9" title="Permalink to this heading">#</a></h4>
 <p>(1)</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
@@ -610,13 +648,15 @@ E(\Phi(X))&amp;=P(Y&lt;X)\\
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">典型题目</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fa22">fa22</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">题目</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">解答</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">题目一</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">题目一解答</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">题目二</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">题目二解答</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">预测题</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">题目</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">解答</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">预测题</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">题目</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">解答</a></li>
 </ul>
 </li>
 </ul>
